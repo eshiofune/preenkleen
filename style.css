@@ -1,6 +1,9 @@
 *{
     overflow-x: hidden;
 }
+body{
+    font-family: roboto;
+}
 /* This is the header and nav section*/
 #header{
     background:#100;
@@ -12,6 +15,10 @@ header img{
     width:50px;
     border-radius:50%;
 }
+#values{
+    font-size:calc(2px + 2vw);
+    text-transform: uppercase;
+}
 .navbar{
     width:100%;
 }
@@ -22,17 +29,22 @@ nav{
 #quote{
     text-align:center;
     margin-left:30px;
+    font-size: calc(3px + 1vw);
 }
 #icons i{
     padding:0 10px;
 }
-/* This is the services carousel section */
+/* This is the services section */
 #services{
-    font-size:calc(2px + 2vw);
-    padding:6rem 0.5rem;
+    font-size:calc(2px + 1.5vw);
+    padding:5rem 0.1rem;
     background:#11A8A1;
-    text-align:center;
+    text-align:left;
     color:#fff;
+}
+
+h3{
+    text-align:center;
 }
 .top-content{
     background:rgb(53, 51, 51);
@@ -46,86 +58,94 @@ figcaption{
     font-size: calc(4px + 1vw);
     caption-side:bottom;
 }
-/* This is the people we have served  section */
+/* This is the people we serve section */
 #servicees{
     background:white;
     margin:0;
-    padding:2rem 0;
+    padding: 40px 0;
 } 
+figure{
+    display:inline-block;
+    padding:0;
+    margin: 0 3.5rem;
+}
+#servicees figure figcaption{
+    font-size: calc(1px + 1vw);
+}
 #servicees h2{
     text-align:center;
     font-size: calc(6px + 2.5vw);
+    padding-bottom: 1rem;
 }
 #servicees img{
-    width:120px;
-    height:120px;
+    width:130px;
+    height:130px;
     border-radius: 50%;
 }
 /* This is the footer section*/
 #footer{
-    font-size:calc(1px + 1vw);
-    padding:5px;
+    font-size:calc(3px + 1vw);
     background:rgba(235, 231, 231, 0.836);
+}
+#footer p{
+    margin : 3px 0;
+}
+#contact{
+    margin-left:7px;
+    line-height:1.2;
+    padding-top:5px;
+}
+#newsletter{
+    margin-left: 15rem;
+    text-align:center;
+    padding-top:5px;
+}
+#newsletter i{
+    font-size:calc(4px + 3vw);
+}
+#socials{
+    margin-left:15rem;
+    font-size:calc(2px + 2vw);
+    padding-top:15px;
+}
+#socials ul li{
+    display:inline-block;
+    padding:0 5px;
+}
+#socials ul li a{
+    text-decoration:none;
+    color:black;
 }
 #contact p:nth-of-type(1){
     font-weight:bold;
     display:inline-block;
-    padding:5px 0 0 0;
     border-bottom:1px solid #000;
-}
-#contact p:nth-of-type(2n){
-    line-height: 0;
-    color: #000;
-}
-#newsletter{
-    display:inline-block;
-}
-#newsletter i{
-    font-size:calc(2px + 3vw);
-}
-#newsletter figcaption{
-    font-size:calc(1px + 1vw);
-}
-#socials{
-    color:black;
-    padding-top:10px;
-    display:inline-block;
-}
-#socials ul li{
-    display:inline-block;
-    font-size:35px;
-    padding: 0 5px;
-    color:black;
-}
-#socials ul li i{
-    color:rgba(0, 0, 0, 0.76);
-}
-h6{
-    font-size:calc(1px + 1vw);
 }
 /* Media Queries */
 @media (max-width: 1024px){
     figure{
-        padding:0 50px;
+        margin: 0 2.5rem;
     }
     #servicees img{
         width:130px;
         height:130px;
         padding-bottom:3px;
     }
+    #newsletter{
+        margin-left: 10rem;
+    }
+    #socials{
+        margin-left: 12rem;
+    }
 }
 @media (max-width: 768px){
     figure{
-        padding:0 40px;
+        margin: 0 1.5rem;
     }
     #servicees img{
-        width:100px;
-        height:100px;
+        width:90px;
+        height:90px;
         padding-bottom:3px;
-    }
-    #socials i{
-        font-size:20px;
-        padding:0;
     }
     #values{
         width:100%;
@@ -134,39 +154,50 @@ h6{
         width:100%;
         text-align:left;
     }
+    #newsletter{
+        margin-left: 8rem;
+    }
+    #socials{
+        margin-left: 7rem;
+    }
 }
 @media(max-width: 420px){
     figure{
-        padding:0 25px;
+        margin: 0 1rem;
     }
     #servicees img{
-        width:40px;
-        height:40px;
+        width:45px;
+        height:45px;
         padding-bottom:3px;
     }
     #quote{
         display:block;
         padding-right:100px;
     }
-    #socials i{
-        font-size:10px;
-        padding:0;
-    }
-    #footer{
-        padding:0;
-    }
     #newsletter{
-        padding-left:10px;
+        margin-left: 2rem;
+    }
+    #socials{
+        margin-left: 1rem;
     }
 }
 @media (max-width: 375px){
     figure{
-        padding:0 1.2rem;
+        margin:0 0.9rem;
     }
     #servicees img{
         width:35px;
         height:35px;
         padding-bottom:3px;
+    }
+    #newsletter{
+        margin-left: 1.5rem;
+    }
+    #socials{
+        margin-left: 1.5rem;
+    }
+    #socials ul li{
+        padding:0 2px;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
