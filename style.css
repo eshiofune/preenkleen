@@ -1,0 +1,284 @@
+*{
+    overflow-x: hidden;
+}
+/* This is the header and nav section*/
+#header{
+    background:#100;
+    color:white;
+    padding-top:20px;
+}
+header img{
+    height:50px;
+    width:50px;
+    border-radius:50%;
+}
+.navbar{
+    width:100%;
+}
+nav{
+    background:#11A8A1;
+    color:white;
+}
+#quote{
+    text-align:center;
+    margin-left:30px;
+}
+#icons i{
+    padding:0 10px;
+}
+/* This is the services carousel section */
+#services{
+    font-size:calc(2px + 2vw);
+    padding:6rem 0.5rem;
+    background:#11A8A1;
+    text-align:center;
+    color:#fff;
+}
+.top-content{
+    background:rgb(53, 51, 51);
+}
+figure{
+    display:inline-block;
+    padding: 0 90px;
+}
+figcaption{
+    text-align:center;
+    font-size: calc(4px + 1vw);
+    caption-side:bottom;
+}
+/* This is the people we have served  section */
+#servicees{
+    background:white;
+    margin:0;
+    padding:2rem 0;
+} 
+#servicees h2{
+    text-align:center;
+    font-size: calc(6px + 2.5vw);
+}
+#servicees img{
+    width:120px;
+    height:120px;
+    border-radius: 50%;
+}
+/* This is the footer section*/
+#footer{
+    font-size:calc(1px + 1vw);
+    padding:5px;
+    background:rgba(235, 231, 231, 0.836);
+}
+#contact p:nth-of-type(1){
+    font-weight:bold;
+    display:inline-block;
+    padding:5px 0 0 0;
+    border-bottom:1px solid #000;
+}
+#contact p:nth-of-type(2n){
+    line-height: 0;
+    color: #000;
+}
+#newsletter{
+    display:inline-block;
+}
+#newsletter i{
+    font-size:calc(2px + 3vw);
+}
+#newsletter figcaption{
+    font-size:calc(1px + 1vw);
+}
+#socials{
+    color:black;
+    padding-top:10px;
+    display:inline-block;
+}
+#socials ul li{
+    display:inline-block;
+    font-size:35px;
+    padding: 0 5px;
+    color:black;
+}
+#socials ul li i{
+    color:rgba(0, 0, 0, 0.76);
+}
+h6{
+    font-size:calc(1px + 1vw);
+}
+/* Media Queries */
+@media (max-width: 1024px){
+    figure{
+        padding:0 50px;
+    }
+    #servicees img{
+        width:130px;
+        height:130px;
+        padding-bottom:3px;
+    }
+}
+@media (max-width: 768px){
+    figure{
+        padding:0 40px;
+    }
+    #servicees img{
+        width:100px;
+        height:100px;
+        padding-bottom:3px;
+    }
+    #socials i{
+        font-size:20px;
+        padding:0;
+    }
+    #values{
+        width:100%;
+    }
+    #values p{
+        width:100%;
+        text-align:left;
+    }
+}
+@media(max-width: 420px){
+    figure{
+        padding:0 25px;
+    }
+    #servicees img{
+        width:40px;
+        height:40px;
+        padding-bottom:3px;
+    }
+    #quote{
+        display:block;
+        padding-right:100px;
+    }
+    #socials i{
+        font-size:10px;
+        padding:0;
+    }
+    #footer{
+        padding:0;
+    }
+    #newsletter{
+        padding-left:10px;
+    }
+}
+@media (max-width: 375px){
+    figure{
+        padding:0 1.2rem;
+    }
+    #servicees img{
+        width:35px;
+        height:35px;
+        padding-bottom:3px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -50%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 576px) {
+    .carousel-item {
+        margin-right: 0;
+    }
+    .carousel-inner .active + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 768px) {
+    .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+
+@media (min-width: 991px) {
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
