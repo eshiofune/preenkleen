@@ -1,26 +1,27 @@
-*{
-    overflow-x: hidden;
-}
 body{
     font-family: roboto;
+    overflow-x: hidden;
 }
 /* This is the header and nav section*/
 #header{
     background:#100;
-    color:white;
+    color:#ffffff;
     padding-top:20px;
 }
+
 header img{
     height:50px;
     width:50px;
     border-radius:50%;
 }
+.navbar{
+    width:100%;
+}
 #values{
     font-size:calc(2px + 2vw);
     text-transform: uppercase;
-}
-.navbar{
-    width:100%;
+    margin:0;
+    padding:0;
 }
 nav{
     background:#11A8A1;
@@ -29,10 +30,23 @@ nav{
 #quote{
     text-align:center;
     margin-left:30px;
-    font-size: calc(3px + 1vw);
+    font-size: calc(3px + 1.5vw);
+    font-family:"courgette";
 }
-#icons i{
-    padding:0 10px;
+#icons li{
+    display:inline-block;
+    margin-right:5px;
+    padding:0 3px;
+    font-size: calc(2px + 2vw);
+}
+#icons{
+    padding-left:4px;
+}
+#icons a{
+    text-decoration:none;
+    color: #fff;
+    display:inline-block;
+    font-size: calc(2px + 2.5vw);
 }
 /* This is the services section */
 #services{
@@ -70,7 +84,8 @@ figure{
     margin: 0 3.5rem;
 }
 #servicees figure figcaption{
-    font-size: calc(1px + 1vw);
+    font-size: calc(1px + 1.5vw);
+    padding-top: 3px;
 }
 #servicees h2{
     text-align:center;
@@ -96,7 +111,7 @@ figure{
     padding-top:5px;
 }
 #newsletter{
-    margin-left: 15rem;
+    margin-left: 18rem;
     text-align:center;
     padding-top:5px;
 }
@@ -104,16 +119,15 @@ figure{
     font-size:calc(4px + 3vw);
 }
 #socials{
-    margin-left:14rem;
-    font-size:calc(2px + 2vw);
+    margin-left:21rem;
+    font-size:calc(2px + 2.5vw);
     padding-top:15px;
 }
 #socials ul li{
     display:inline-block;
     padding:0 5px;
 }
-#socials ul li a{
-    text-decoration:none;
+#socials a{
     color:rgba(32, 30, 30, 0.918);
 }
 #contact p:nth-of-type(1){
@@ -121,24 +135,66 @@ figure{
     display:inline-block;
     border-bottom:1px solid #000;
 }
+#contact p:nth-of-type(4n){
+    display:inline-block;
+}
 /* Media Queries */
 @media (max-width: 1024px){
+    #values{
+        font-size:calc(2px + 2.5vw);
+    }
+    #quotes{
+        font-size: calc(2px + 2vw);
+    }
+    
+    #icons{
+        font-size: calc(2px + 2vw);
+    }
+    #services{
+        font-size: calc(2px + 2vw);
+    }
+    #servicees figure figcaption{
+        font-size: calc(3px + 1.5vw);
+    }
+    #footer{
+        font-size:calc(2px + 1.5vw);
+    }
     figure{
         margin: 0 2.5rem;
     }
     #servicees img{
-        width:130px;
-        height:130px;
+        width:120px;
+        height:120px;
         padding-bottom:3px;
     }
     #newsletter{
-        margin-left: 10rem;
+        margin-left: 9rem;
     }
     #socials{
         margin-left: 12rem;
     }
 }
 @media (max-width: 768px){
+    #values{
+        font-size:calc(2px + 3vw);
+    }
+    #quotes{
+        font-size: calc(10px + 3vw);
+        width:100%;
+    }
+    
+    #icons{
+        font-size: calc(2px + 2vw);
+    }
+    #services{
+        font-size: calc(2px + 2vw);
+    }
+    #servicees figure figcaption{
+        font-size: calc(3px + 1.5vw);
+    }
+    #footer{
+        font-size:calc(2px + 1.5vw);
+    }
     figure{
         margin: 0 1.5rem;
     }
@@ -155,35 +211,54 @@ figure{
         text-align:left;
     }
     #newsletter{
-        margin-left: 8rem;
+        margin-left: 6rem;
     }
     #socials{
-        margin-left: 6rem;
+        margin-left: 7rem;
     }
 }
 @media(max-width: 420px){
     figure{
-        margin: 0 1rem;
+        margin: 0 0.8rem;
+    }
+    #services p{
+        font-size: calc(4px + 2vw);
     }
     #servicees img{
         width:45px;
         height:45px;
         padding-bottom:3px;
     }
+    #servicees h2{
+        font-size: calc(3px + 5vw);
+    }
     #quote{
         display:block;
         padding-right:100px;
     }
+    #footer{
+        font-size: calc(2px + 1.5vw);
+    }
     #newsletter{
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
     #socials{
-        margin-left: 1rem;
+        margin-left: 0.6rem;
+    }
+    #quote p{
+        font-size: calc(3px + 4vw);
+    } 
+    #values{
+        font-size: calc(3px + 3vw);
+    }
+    #icons li a{
+        font-size:calc(4vw + 4vw);
+        padding-left: 10px;
     }
 }
 @media (max-width: 375px){
     figure{
-        margin:0 0.9rem;
+        margin:0 0.7rem;
     }
     #servicees img{
         width:35px;
@@ -191,14 +266,36 @@ figure{
         padding-bottom:3px;
     }
     #newsletter{
-        margin-left: 1.5rem;
+        margin-left: 1rem;
     }
     #socials{
-        margin-left: 1.5rem;
+        margin-left: 1rem;
     }
     #socials ul li{
         padding:0 2px;
     }
+    @media (max-width: 320px){
+        figure{
+            margin:0 0.4rem;
+        }
+        #values{
+            font-size: calc(2px + 3vw);
+        }
+        #servicees img{
+            width:35px;
+            height:35px;
+            padding-bottom:3px;
+        }
+        #newsletter{
+            margin-left: 1rem;
+        }
+        #socials{
+            margin-left: 1rem;
+        }
+        #socials ul li{
+            padding:0 2px;
+        }
+}
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
