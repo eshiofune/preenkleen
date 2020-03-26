@@ -48,6 +48,9 @@ nav{
     display:inline-block;
     font-size: calc(2px + 2.5vw);
 }
+#whatsapp{
+    display:none;
+}
 /* This is the services section */
 #services{
     font-size:calc(2px + 1.5vw);
@@ -116,12 +119,12 @@ figure{
     padding-top:5px;
 }
 #newsletter i{
-    font-size:calc(4px + 3vw);
+    font-size:calc(4px + 4vw);
 }
 #socials{
     margin-left:21rem;
     font-size:calc(2px + 2.5vw);
-    padding-top:15px;
+    padding-top:5px;
 }
 #socials ul li{
     display:inline-block;
@@ -216,6 +219,18 @@ figure{
     #socials{
         margin-left: 7rem;
     }
+    #socials ul li a{
+        font-size:calc(2px + 5vw);
+    }
+    #whatsapp{
+        display:block;
+        width:70px;
+        height:auto;
+        position:fixed;
+        top:850px;
+        left:680px;
+        filter: drop-shadow(5px 5px 5px #222);
+    }
 }
 @media(max-width: 420px){
     figure{
@@ -240,10 +255,10 @@ figure{
         font-size: calc(2px + 1.5vw);
     }
     #newsletter{
-        margin-left: 1rem;
+        margin-left: 1.5rem;
     }
     #socials{
-        margin-left: 0.6rem;
+        margin-left: 1rem;
     }
     #quote p{
         font-size: calc(3px + 4vw);
@@ -254,6 +269,14 @@ figure{
     #icons li a{
         font-size:calc(4vw + 4vw);
         padding-left: 10px;
+    }
+    #whatsapp{
+        display:block;
+        width:45px;
+        height:auto;
+        position:fixed;
+        top:85%;
+        left:350px;
     }
 }
 @media (max-width: 375px){
@@ -272,9 +295,18 @@ figure{
         margin-left: 1rem;
     }
     #socials ul li{
-        padding:0 2px;
+        padding:0 4px;
     }
-    @media (max-width: 320px){
+    #whatsapp{
+        display:block;
+        width:40px;
+        height:auto;
+        position:fixed;
+        top:84%;
+        left:320px;
+    }
+}
+ @media (max-width: 320px){
         figure{
             margin:0 0.4rem;
         }
@@ -289,13 +321,24 @@ figure{
         #newsletter{
             margin-left: 1rem;
         }
+        #newsletter i{
+            font-size:calc(4px + 3vw);
+        }
         #socials{
-            margin-left: 1rem;
+            margin-left: 0;
         }
-        #socials ul li{
+        #socials ul li a{
             padding:0 2px;
+            font-size: calc(2px + 4vw);
         }
-}
+        #whatsapp{
+            display:block;
+            width:40px;
+            height:auto;
+            position:fixed;
+            top:81%;
+            left:270px;
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
@@ -378,7 +421,6 @@ figure{
         transform: translate3d(100%, 0, 0);
         visibility: visible;
         display: block;
-        visibility: visible;
     }
 }
 
